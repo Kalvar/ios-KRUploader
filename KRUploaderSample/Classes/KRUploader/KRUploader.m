@@ -1,8 +1,8 @@
 //
 //  KRUploader.m
-//  KRUploaderSample
+//  V0.5 Beta
 //
-//  Created by Kalvar on 13/6/16.
+//  Created by Kalvar ( ilovekalvar@gmail.com ) on 13/6/16.
 //  Copyright (c) 2013年 Kuo-Ming Lin. All rights reserved.
 //
 
