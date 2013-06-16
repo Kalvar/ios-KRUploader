@@ -69,7 +69,7 @@
 }
 
 #pragma UIImagePickerDelegate
-//選擇完成時的動作
+//When you pick an image. 選擇完成時的動作
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
 {    
     //[picker.parentViewController dismissModalViewControllerAnimated:YES];
@@ -77,7 +77,7 @@
     self.outImageView.image = image;
 }
 
-//選擇取消時的動作
+//When you press the cancel button. 選擇取消時的動作
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
