@@ -22,7 +22,7 @@ KRUploader can easy use POST method of HTTP protocol to upload an image to serve
     __weak KRUploader *_anotherUploader = [KRUploader sharedManager];
     _anotherUploader.serverURL          = @"http://yourserver";
     _anotherUploader.uploadImage        = _uploadImage;
-    _anotherUploader.serverReceivedName = @"myVarName";
+    _anotherUploader.serverReceivedName = @"myVarName";   //$_FILES['myVarName']['name'] = 'myImage.png'
     _anotherUploader.imageFileName      = @"myImage.png";
     [_anotherUploader setCompletion:^{
         NSLog(@"response string : %@", _anotherUploader.responseString);
@@ -37,7 +37,7 @@ KRUploader can easy use POST method of HTTP protocol to upload an image to serve
 {
     self._krUploader.serverURL          = @"http://yourserver";
     self._krUploader.uploadImage        = _uploadImage;
-    self._krUploader.serverReceivedName = @"myVarName";
+    self._krUploader.serverReceivedName = @"myVarName";   //$_FILES['myVarName']['name'] = 'myImage.png'
     self._krUploader.imageFileName      = @"myImage.png";
     [self._krUploader startUploadWithCompletion:^(NSString *responseString) {
         NSLog(@"response string : %@", responseString);

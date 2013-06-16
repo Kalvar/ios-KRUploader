@@ -46,7 +46,7 @@
     __weak KRUploader *_anotherUploader = [KRUploader sharedManager];
     _anotherUploader.serverURL          = @"http://yourserver";
     _anotherUploader.uploadImage        = self.outImageView.image;
-    _anotherUploader.serverReceivedName = @"myVarName";
+    _anotherUploader.serverReceivedName = @"myVarName";    //$_FILES['myVarName']['name'] = 'myImage.png'
     _anotherUploader.imageFileName      = @"myImage.png";
     [_anotherUploader setCompletion:^{
         NSLog(@"response string : %@", _anotherUploader.responseString);
@@ -61,7 +61,7 @@
 {
     self._krUploader.serverURL          = @"http://yourserver";
     self._krUploader.uploadImage        = self.outImageView.image;
-    self._krUploader.serverReceivedName = @"myVarName";
+    self._krUploader.serverReceivedName = @"myVarName";   //$_FILES['myVarName']['name'] = 'myImage.png'
     self._krUploader.imageFileName      = @"myImage.png";
     [self._krUploader startUploadWithCompletion:^(NSString *responseString) {
         NSLog(@"response string : %@", responseString);
