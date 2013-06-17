@@ -118,7 +118,13 @@
 {
     self.completion = nil;
     self.failure    = nil;
-    _completeHandler( [self startUpload] );
+    dispatch_queue_t queue = dispatch_queue_create("_loadImageWithPageQueue", NULL);
+    dispatch_async(queue, ^(void) {
+        NSString *_response = [self startUpload];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            _completeHandler( _response );
+        });
+    });
 }
 
 @end
