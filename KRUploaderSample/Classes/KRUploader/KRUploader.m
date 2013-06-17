@@ -118,7 +118,7 @@
 {
     self.completion = nil;
     self.failure    = nil;
-    dispatch_queue_t queue = dispatch_queue_create("_loadImageWithPageQueue", NULL);
+    dispatch_queue_t queue = dispatch_queue_create("_startUploadQueue", NULL);
     dispatch_async(queue, ^(void) {
         NSString *_response = [self startUpload];
         dispatch_async(dispatch_get_main_queue(), ^(void){
